@@ -5,7 +5,9 @@
 
 ## About  
 
-react-rellax-wrapper provides a react wrapper around Rellax js library. This allows for a more React idomatic way of handling parralax with the Rellax library.
+react-rellax-wrapper provides a react wrapper around the Rellax js library. This allows for a more React idomatic way of handling parralax with the Rellax library.
+
+Rellax Library https://dixonandmoe.com/rellax/
 
 ## Installing
 
@@ -53,6 +55,11 @@ If a prop is ommited it will default to the rellax's generic default. For exampl
 All traditional options for Rellax can also be used such as callback, center, and relativeToWrapper.
 
 ```ts
+interface RellaxWrapperProps extends Rellax.RellaxOptions {
+    zIndex?: number
+    percentage?: number
+    speed?: number
+}
 interface RellaxOptions {
     /**
      * Will run on every animation event
@@ -88,10 +95,5 @@ interface RellaxOptions {
      */
     relativeToWrapper?: boolean;
 }
-    
-interface RellaxWrapperProps extends Rellax.RellaxOptions {
-  zIndex?: number
-  percentage?: number
-  speed?: number
-}
 
+```
