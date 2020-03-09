@@ -1,12 +1,12 @@
 # [React Rellax Wrapper 🎁](https://github.com/scottjr632/react-rellax-wrapper)
 
-[![NPM version](http://img.shields.io/npm/v/react-provider-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
-[![NPM downloads](http://img.shields.io/npm/dm/react-provider-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
+[![NPM version](http://img.shields.io/npm/v/react-rellax-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
+[![NPM downloads](http://img.shields.io/npm/dm/react-rellax-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://scottjr632.github.io/react-rellax-wrapper/)
 
 ## About  
 
-react-rellax-wrapper provides a react wrapper around the Rellax js library. This allows for a more React idomatic way of handling parralax with the Rellax library.
+react-rellax-wrapper provides a react wrapper around the Rellax js library. This allows for a more idomatic React way of handling parallax with the Rellax library.
 
 Rellax Library https://dixonandmoe.com/rellax/  
 
