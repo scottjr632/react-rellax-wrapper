@@ -20,7 +20,7 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, percen
         rellax.destroy()
       }
     }
-  }, [])
+  }, [rellaxElement])
   return useMemo(() => (
     <div
       ref={rellaxElement}
@@ -30,7 +30,7 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, percen
     >
       {children}
     </div>
-  ), [])
+  ), [rellax])
 }
 
 export default RellaxWrapper
