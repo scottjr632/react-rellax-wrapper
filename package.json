@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scottjr632/react-provider-wrapper.git"
+    "url": "git+https://github.com/scottjr632/react-rellax-wrapper.git"
   },
   "keywords": [
     "ReactJS",
@@ -32,9 +32,9 @@
   "author": "Scott Richardson <scott@scottrichardson.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scottjr632/react-provider-wrapper/issues"
+    "url": "https://github.com/scottjr632/react-rellax-wrapper/issues"
   },
-  "homepage": "https://github.com/scottjr632/react-provider-wrapper#readme",
+  "homepage": "https://github.com/scottjr632/react-rellax-wrapper#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@storybook/addon-actions": "^5.3.14",
