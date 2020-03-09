@@ -1,6 +1,6 @@
 {
   "name": "react-rellax-wrapper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A react wrapper around the Rellax javascript library. Rellax -> https://dixonandmoe.com/rellax/",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
