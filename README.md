@@ -1,84 +1,97 @@
-# [React Provider Wrapper 🎁](https://github.com/scottjr632/react-provider-wrapper)
+# [React Rellax Wrapper 🎁](https://github.com/scottjr632/react-rellax-wrapper)
 
-[![NPM version](http://img.shields.io/npm/v/react-provider-wrapper.svg)](https://www.npmjs.com/package/react-provider-wrapper)
-[![NPM downloads](http://img.shields.io/npm/dm/react-provider-wrapper.svg)](https://www.npmjs.com/package/react-provider-wrapper)
+[![NPM version](http://img.shields.io/npm/v/react-provider-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
+[![NPM downloads](http://img.shields.io/npm/dm/react-provider-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
 
 ## About  
 
-React Provider Wrapper wraps your application in all React context providers.
-This solves the issue of wrapper hell that can happen when working with multiple providers for an application or section of an application.
-
-__Example of wrapper hell__
-```js
-const App = () => (
-    <FirstProvider>
-      <SecondProvider>
-        <ThirdProvider>
-          <FourthProvider>
-            <FifthProvider>
-              <FirstConsumer />
-              <SecondConsumer />
-            </FifthProvider>
-          </FourthProvider>
-        </ThirdProvider>
-      </SecondProvider>
-    </FirstProvider>
-)
-```
+react-rellax-wrapper provides a react wrapper around Rellax js library. This allows for a more React idomatic way of handling parralax with the Rellax library.
 
 ## Installing
 
 ### npm
 ```sh
-$ npm install react-provider-wrapper
+$ npm install react-rellax-wrapper
 ```
 ### yarn
 ```sh
-$ yarn add react-provider-wrapper
+$ yarn add react-rellax-wrapper
 ```
 
 ## Getting started
 
-Import WrapProviders and each provider into the component that you want to the parent component of the children that you want to consume the provider
+Import RellaxWrapper and wrap the component that you want to add the parralex feature to with RellaxWrapper.
+
+```js
+import RellaxWrapper from 'react-rellax-wrapper'
+# or
+import { RellaxWrapper } from 'react-rellax-wrapper'
+```
+
+```js
+
+const App = () => (
+  <div>
+    <RellaxWrapper speed={7}>
+      <h1>I am really fast!</h1>
+    </RellaxWrapper>
+    <RellaxWrapper speed={-9} percentage={0.9}>
+      <div>
+        <p>I am really slow</p>
+      </div>
+    </RellaxWrapper>
+  </div>
+)
+
+```
+
+## Props
+
+__All props are optional__
+
+If a prop is ommited it will default to the rellax's generic default. For example if speed is omited default speed is -2.  
+All traditional options for Rellax can also be used such as callback, center, and relativeToWrapper.
 
 ```ts
-import WrapProviders from 'react-provider-wrapper'
-import MockContextProvider from './mockContextProvider.tsx'
-import MockSecondContextProvider from './mockSecondContextProvider.tsx'
-```  
-__Example provider__
-```js
-import React, { createContext, useState, useContext } from 'react'
-
-const ProviderMockContext = createContext(null)
-const MockContextProvider = ({ children }) => {
-  const [state, setState] = useState({});
-  return (
-    <ProviderMockContext.Provider value={{state, setState}}>
-      {children}
-    </ProviderMockContext.Provider>
-  )
+interface RellaxOptions {
+    /**
+     * Will run on every animation event
+     * @param positions Object with x and y positions of the rellax element
+     */
+    callback?(positions: { x: number; y: number }): void;
+    /**
+     * Enable the ability to center parallax elements in your viewport
+     */
+    center?: boolean;
+    /**
+     * Enable horizontal parallax. This feature is intended for panoramic style websites, where users scroll horizontally instead of vertically
+     */
+    horizontal?: boolean;
+    /**
+     * Allow decimal pixel values
+     */
+    round?: boolean;
+    /**
+     * A negative value will make it move slower than regular scrolling, and a positive value will make it move faster
+     */
+    speed?: number;
+    /**
+     * Enable vertical parallax
+     */
+    vertical?: boolean;
+    /**
+     * By default, the position of parallax elements is determined via the scroll position of the body. Passing in the wrapper property will tell Rellax to watch that element instead
+     */
+    wrapper?: string | HTMLElement;
+    /**
+     * Do we want rellax element to be relative to the mentioned wrapper.
+     */
+    relativeToWrapper?: boolean;
+}
+    
+interface RellaxWrapperProps extends Rellax.RellaxOptions {
+  zIndex?: number
+  percentage?: number
+  speed?: number
 }
 
-export const useProviderMock = () => useContext(ProviderMockContext)
-export default MockContextProvider
-```
-
-__Create array of providers__
-```js
-const providers = [
-    MockContextProvider,
-    MockSecondContextProvider
-]
-```
-This can also be refactored out into a module that contains all providers and exports them in an index.{ts,js} file
-
-__Wrap application or parent component with WrapProviders__
-```js
-    const App = () => (
-        <WrapProviders providers={providers}>
-            <ConsumerComponent />
-            <AnotherConsumerComponent />
-        </WrapProviders>
-    )
-```
