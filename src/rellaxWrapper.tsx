@@ -1,13 +1,13 @@
 import React, { FC, useState, useRef, useEffect, useMemo } from 'react'
 import Rellax from 'rellax';
 
-interface Props extends Rellax.RellaxOptions {
+interface RellaxWrapperProps extends Rellax.RellaxOptions {
   zIndex?: number
   percentage?: number
   speed?: number
 }
 
-const RellaxWrapper: FC<Props> = ({ children, zIndex, speed, percentage, ...options}) => {
+const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, percentage, ...options}) => {
   const [rellax, setRellax] = useState(null);
   const rellaxElement = useRef(null);
 

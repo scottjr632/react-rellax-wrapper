@@ -1,3 +1,3 @@
-import WrapProviders from './rellaxJs';
-export { default as WrapProviders } from './rellaxJs'
-export default WrapProviders
+import RellaxWrapper from './rellaxWrapper';
+export { default as RellaxWrapper } from './rellaxWrapper'
+export default RellaxWrapper

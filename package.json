@@ -1,7 +1,7 @@
 {
-  "name": "react-provider-wrapper",
+  "name": "react-rellax-wrapper",
   "version": "0.0.1",
-  "description": "Wrap React application with multiple wrappers. Avoiding wrapper hell created by multiple providers.",
+  "description": "A react wrapper around the Rellax javascript library. Rellax -> https://dixonandmoe.com/rellax/",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
