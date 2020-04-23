@@ -71,6 +71,10 @@ interface RellaxWrapperProps extends Rellax.RellaxOptions {
     zIndex?: number
     percentage?: number
     speed?: number
+    xs?: number
+    mobile?: number
+    tablet?: number
+    desktop?: number
 }
 interface RellaxOptions {
     /**
