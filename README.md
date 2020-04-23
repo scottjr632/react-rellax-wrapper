@@ -32,7 +32,7 @@ $ npm install react-rellax-wrapper
 $ yarn add react-rellax-wrapper
 ```
 
-## Getting started
+## Getting started 
 
 Import RellaxWrapper and wrap the component that you want to add the parralex feature to with RellaxWrapper.
 
