@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef, useEffect, useMemo } from 'react'
+import React, {ReactNode, FC, useState, useRef, useEffect, useMemo } from 'react'
 import Rellax from 'rellax';
 
 interface RellaxWrapperProps extends Rellax.RellaxOptions {
@@ -8,6 +8,7 @@ interface RellaxWrapperProps extends Rellax.RellaxOptions {
   mobile?: number
   tablet?: number
   desktop?: number
+  children: ReactNode
 }
 
 const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile, tablet, desktop, percentage, ...options}) => {
