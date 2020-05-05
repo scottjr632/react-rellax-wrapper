@@ -24,7 +24,7 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile
       }
     }
   }, [rellaxElement])
-  return useMemo(() => (
+  return (
     <div
       ref={rellaxElement}
       data-rellax-speed={speed && speed.toString()}
@@ -37,7 +37,7 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile
     >
       {children}
     </div>
-  ), [rellax])
+  )
 }
 
 export default RellaxWrapper
