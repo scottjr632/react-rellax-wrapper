@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef, useEffect, useMemo } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react'
 import Rellax from 'rellax';
 
 interface RellaxWrapperProps extends Rellax.RellaxOptions {
