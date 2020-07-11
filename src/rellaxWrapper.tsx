@@ -10,7 +10,7 @@ interface RellaxWrapperProps extends Rellax.RellaxOptions {
   desktop?: number
 }
 
-const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile, tablet, desktop, percentage, ...options}) => {
+const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile, tablet, desktop, percentage, xs, ...options}) => {
   const [rellax, setRellax] = useState(null);
   const rellaxElement = useRef(null);
 
