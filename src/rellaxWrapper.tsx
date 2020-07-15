@@ -1,16 +1,28 @@
-import React, { FC, useState, useRef, useEffect } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react';
 import Rellax from 'rellax';
 
 interface RellaxWrapperProps extends Rellax.RellaxOptions {
-  zIndex?: number
-  percentage?: number
-  xs?: number
-  mobile?: number
-  tablet?: number
-  desktop?: number
+  className?: string;
+  zIndex?: number;
+  percentage?: number;
+  xs?: number;
+  mobile?: number;
+  tablet?: number;
+  desktop?: number;
 }
 
-const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile, tablet, desktop, percentage, xs, ...options}) => {
+const RellaxWrapper: FC<RellaxWrapperProps> = ({
+  children,
+  className,
+  zIndex,
+  speed,
+  mobile,
+  tablet,
+  desktop,
+  percentage,
+  xs,
+  ...options
+}) => {
   const [rellax, setRellax] = useState(null);
   const rellaxElement = useRef(null);
 
@@ -20,10 +32,10 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile
     }
     return () => {
       if (rellax) {
-        rellax.destroy()
+        rellax.destroy();
       }
-    }
-  }, [rellaxElement])
+    };
+  }, [rellaxElement]);
   return (
     <div
       ref={rellaxElement}
@@ -34,10 +46,11 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({ children, zIndex, speed, mobile
       data-rellax-desktop-speed={desktop && desktop.toString()}
       data-rellax-zindex={zIndex && zIndex.toString()}
       data-rellax-percentage={percentage && percentage.toString()}
+      className={className}
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default RellaxWrapper
+export default RellaxWrapper;
