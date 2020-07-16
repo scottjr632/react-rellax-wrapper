@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import RellaxWrapper from '../src'
+import RellaxWrapper from '../src';
 
-import './index.css'
+import './index.css';
 
 export default {
   title: 'Rellax Wrapper',
-  component: RellaxWrapper
-}
+  component: RellaxWrapper,
+};
 
 export const Default = () => (
   <div className={'default__container'}>
@@ -25,7 +25,7 @@ export const Default = () => (
     </div>
     <h3>Vertical Parallex</h3>
   </div>
-)
+);
 
 export const Horizontal = () => (
   <div className={'horizontal__container'} id='wrapper'>
@@ -41,7 +41,7 @@ export const Horizontal = () => (
       </div>
     </RellaxWrapper>
   </div>
-)
+);
 
 export const Centered = () => (
   <div className={'default__container'}>
@@ -59,7 +59,7 @@ export const Centered = () => (
     </div>
     <h3>Centered Parallex</h3>
   </div>
-)
+);
 
 export const Callback = () => {
   const [slowValues, setSlowValues] = useState({x: 0, y: 0});
@@ -82,5 +82,5 @@ export const Callback = () => {
       </div>
       <h3>Using Callback</h3>
     </div>
-  )
-}
+  );
+};
