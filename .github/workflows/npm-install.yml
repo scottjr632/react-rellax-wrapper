@@ -1,5 +1,13 @@
 name: npm-install
-on: push
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
+  pull_request:
+    branches:
+      - '*'
+      - '!master'
 jobs:
   npm-install:
     name: npm-install
