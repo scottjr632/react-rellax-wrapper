@@ -9,6 +9,7 @@ interface RellaxWrapperProps extends Rellax.RellaxOptions {
   mobile?: number;
   tablet?: number;
   desktop?: number;
+  style?: React.CSSProperties;
 }
 
 const RellaxWrapper: FC<RellaxWrapperProps> = ({
@@ -21,6 +22,7 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({
   desktop,
   percentage,
   xs,
+  style,
   ...options
 }) => {
   const [rellax, setRellax] = useState(null);
@@ -47,6 +49,7 @@ const RellaxWrapper: FC<RellaxWrapperProps> = ({
       data-rellax-zindex={zIndex && zIndex.toString()}
       data-rellax-percentage={percentage && percentage.toString()}
       className={className}
+      style={style}
     >
       {children}
     </div>
