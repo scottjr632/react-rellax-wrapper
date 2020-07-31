@@ -10,6 +10,7 @@ interface RellaxWrapperProps extends Rellax.RellaxOptions {
   tablet?: number;
   desktop?: number;
   style?: React.CSSProperties;
+  speed?: number;
 }
 
 const RellaxWrapper: FC<RellaxWrapperProps> = ({
