@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import RellaxWrapper from '../src';
 
 import './index.css';
 
 export default {
-  title: 'Example/Default',
-  component: Default,
+  title: 'Example/Centered',
+  component: Centered,
 };
 
-export const Default = () => (
+export const Centered = () => (
   <div className={'default__container'}>
     <div className={'default__wrapper'}>
-      <RellaxWrapper speed={-7}>
+      <RellaxWrapper speed={-7} center={true}>
         <div className={'icon'}>
           🐌
         </div>
       </RellaxWrapper>
-      <RellaxWrapper speed={7}>
+      <RellaxWrapper speed={7} center={true}>
         <div className={'icon'}>
           🚀
         </div>
       </RellaxWrapper>
     </div>
-    <h3>Vertical Parallex</h3>
+    <h3>Centered Parallex</h3>
   </div>
 );
