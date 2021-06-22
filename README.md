@@ -1,8 +1,10 @@
-# [React Rellax Wrapper 🎁](https://github.com/scottjr632/react-rellax-wrapper)
+# [React Rellax Wrapper 🎁](https://github.com/scottjr632/react-rellax-wrapper) 
 
 [![NPM version](http://img.shields.io/npm/v/react-rellax-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
 [![NPM downloads](http://img.shields.io/npm/dm/react-rellax-wrapper.svg)](https://www.npmjs.com/package/react-rellax-wrapper)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://scottjr632.github.io/react-rellax-wrapper/)
+
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/scottrichardson)
 
 ## About  
 
